@@ -3,7 +3,10 @@
         <div class="panel panel-danger col-sm-6">
             <!-- Default panel contents -->
             <div class="panel-heading"> <%= card.Username %> </div>
-    
+                <div class="panel-body">
+                    <a href="/cards/<%= card.id %>" data-method="delete">削除</a>
+                    <a href="/cards/<%= card.id %>/card_edit">編集</a>
+                </div>
             <!-- List group -->
             <ul class="list-group">
                 <li class="list-group-item">　<p>＜試合名＞</p>　<%= card.Title %>　</li>
@@ -14,8 +17,9 @@
             </ul>
         </div>
     <% end %>
-    
+
+    <p> </p>
+
     <div> <a href="/" class="btn btn-danger">トップに戻る</a> </div>
     
 </div>
-

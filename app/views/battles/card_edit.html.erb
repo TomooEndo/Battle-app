@@ -1,0 +1,43 @@
+<div class="container">
+  <h3>試合予定編集</h3>
+    <%= form_tag("/cards/"+@card.id.to_s, :method=>:patch) do %>
+    
+      <div class="form-group">
+        <%= label_tag "Username", "ユーザー名" %>
+        <%= text_field :cards, :Username, id:"Username", class:"form-control", value: @card.Username %>
+      </div>
+      
+      <div class="form-group">
+        <%= label_tag "Title", "試合名" %>
+        <%= text_field :cards, :Title, id:"Title", class:"form-control", value: @card.Title %>
+      </div>
+      
+      <div class="form-group">
+        <%= label_tag "Enemyname", "対戦相手" %>
+        <%= text_field :cards, :Enemyname, id:"Enemyname", class:"form-control", value: @card.Enemyname %>
+      </div>
+    
+      <div class="form-group">
+        <%= label_tag "Cdate", "試合日" %>
+        <%= text_field :cards, :Cdate, id:"Cdate", class:"form-control", value: @card.Cdate%>
+      </div>
+      
+      <div class="form-group">
+        <%= label_tag "Cplace", "試合会場" %>
+        <%= text_field :cards, :Cplace, id:"Cplace", class:"form-control", value: @card.Cplace%>
+      </div>
+    
+      <div class="form-group">
+        <%= label_tag "Ccomment", "コメント" %>
+        <%= text_field :cards, :Ccomment, id:"Ccomment", class:"form-control", value: @card.Ccomment%>
+      </div>
+      
+      <%= submit_tag "更新", class:"btn btn-danger" %>
+  
+  <% end %> 
+  
+    <p> </p>
+
+    <div> <a href="/" class="btn btn-danger">トップに戻る</a> </div>
+
+</div>
