@@ -1,0 +1,21 @@
+<div class="container">
+    <% @cards.each do |card| %>
+        <div class="panel panel-danger col-sm-6">
+            <!-- Default panel contents -->
+            <div class="panel-heading"> <%= card.Username %> </div>
+    
+            <!-- List group -->
+            <ul class="list-group">
+                <li class="list-group-item">　<p>＜試合名＞</p>　<%= card.Title %>　</li>
+                <li class="list-group-item">　<p>＜対戦相手＞</p>　<%= card.Enemyname %>　</li>
+                <li class="list-group-item">　<p>＜試合日＞</p>　　<%= card.Cdate %>　</li>
+                <li class="list-group-item">　<p>＜会場＞</p>　　<%= card.Cplace %>　</li>
+                <li class="list-group-item">　<p>＜コメント＞</p>　　　<%= card.Ccomment %>　</li>
+            </ul>
+        </div>
+    <% end %>
+    
+    <div> <a href="/" class="btn btn-danger">トップに戻る</a> </div>
+    
+</div>
+

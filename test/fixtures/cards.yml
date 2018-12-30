@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Username: MyString
+  Title: MyString
+  Enemyname: MyString
+  Cdate: 2018-12-29
+  Cplace: MyString
+  Ccomment: MyString
+
+two:
+  Username: MyString
+  Title: MyString
+  Enemyname: MyString
+  Cdate: 2018-12-29
+  Cplace: MyString
+  Ccomment: MyString
