@@ -15,19 +15,12 @@ class BattlesController < ApplicationController
     
     def create
         
-        @Username = params["cards"]["Username"]
-        @Title = params["cards"]["Title"]
-        @Enemyname = params["cards"]["Enemyname"]
-        @Cdate = params["cards"]["Cdate"]
-        @Cplace = params["cards"]["Cplace"]
-        @Ccomment = params["cards"]["Ccomment"]
-        
-        Card.create(Username:@Username, 
-                    Title:@Title,
-                    Enemyname:@Enemyname,
-                    Cdate:@Cdate,
-                    Cplace:@Cplace,
-                    Ccomment:@Ccomment)            
+        Card.create(Username:params["cards"]["Username"], 
+                    Title:params["cards"]["Title"],
+                    Enemyname:params["cards"]["Enemyname"],
+                    Cdate:params["cards"]["Cdate"],
+                    Cplace:params["cards"]["Cplace"],
+                    Ccomment:params["cards"]["Ccomment"])            
         redirect_to "/" 
     end
 
@@ -44,22 +37,14 @@ class BattlesController < ApplicationController
 
     def card_update
 
-        @Username = params["cards"]["Username"]
-        @Title = params["cards"]["Title"]
-        @Enemyname = params["cards"]["Enemyname"]
-        @Cdate = params["cards"]["Cdate"]
-        @Cplace = params["cards"]["Cplace"]
-        @Ccomment = params["cards"]["Ccomment"]
-
-
         card = Card.find(params["id"])
 
-        card.Username=@Username 
-        card.Title=@Title
-        card.Enemyname=@Enemyname
-        card.Cdate=@Cdate
-        card.Cplace=@Cplace
-        card.Ccomment=@Ccomment
+        card.Username=params["cards"]["Username"] 
+        card.Title=params["cards"]["Title"]
+        card.Enemyname=params["cards"]["Enemyname"]
+        card.Cdate=params["cards"]["Cdate"]
+        card.Cplace=params["cards"]["Cplace"]
+        card.Ccomment=params["cards"]["Ccomment"]
         card.save
 
         redirect_to "/" 
