@@ -1,5 +1,7 @@
 class BattlesController < ApplicationController
     
+     before_action :authenticate_user!, only: [:new, :create, :destroy, :card_edit, :card_update]
+    
     def top
         render template: "battles/top"
     end
